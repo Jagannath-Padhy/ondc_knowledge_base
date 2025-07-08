@@ -13,11 +13,13 @@
     "use_cache": true,
     "max_depth": 3,
     "check_updates": true,
-    "deduplication": true
+    "deduplication": true,
+    "follow_links_depth": 3
   },
   "search": {
     "score_threshold": 0.3,
-    "max_results": 10
+    "max_results": 10,
+    "include_source_links": true
   },
   "startup_documents": [
     {
@@ -29,6 +31,16 @@
       "url": "https://docs.google.com/document/d/1E2OyVXh34YNEVOnS4rO3nPVoqTO3RsG2uh-BqnSrqgY/edit",
       "domain": "retail", 
       "version": "1.2.5"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1ROAGXqj5cJkgsNWvg_xiufglhqEQDJFBgQSPcFZMZd4/edit?tab=t.0",
+      "domain": "logistics",
+      "version": "1.2.0"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1f0BhkGAoAi79lXGhI9qS-MhwdsSK390iJT1KjGMWoc4/edit?tab=t.s5nkfdii7p8k#heading=h.8vwo0z45jmud",
+      "domain": "igm",
+      "version": "1.0.0"
     }
   ]
 }

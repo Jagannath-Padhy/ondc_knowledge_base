@@ -1,0 +1,108 @@
+{
+  "description": "Example cancel payload for ONDC Retail v1.2.0",
+  "version": "1.2.0",
+  "domain": "ONDC:RET10",
+  "cancel_request": {
+    "context": {
+      "domain": "ONDC:RET10",
+      "country": "IND",
+      "city": "std:080",
+      "action": "cancel",
+      "core_version": "1.2.0",
+      "bap_id": "buyerNP.com",
+      "bap_uri": "https://buyerNP.com/ondc",
+      "bpp_id": "sellerNP.com",
+      "bpp_uri": "https://sellerNP.com/ondc",
+      "transaction_id": "T2",
+      "message_id": "M5",
+      "timestamp": "2023-06-04T10:00:00.000Z",
+      "ttl": "PT30S"
+    },
+    "message": {
+      "order_id": "O1",
+      "cancellation_reason_id": "003",
+      "descriptor": {
+        "short_desc": "Order cancelled by buyer"
+      }
+    }
+  },
+  "cancel_response": {
+    "context": {
+      "domain": "ONDC:RET10",
+      "country": "IND",
+      "city": "std:080",
+      "action": "on_cancel",
+      "core_version": "1.2.0",
+      "bap_id": "buyerNP.com",
+      "bap_uri": "https://buyerNP.com/ondc",
+      "bpp_id": "sellerNP.com",
+      "bpp_uri": "https://sellerNP.com/ondc",
+      "transaction_id": "T2",
+      "message_id": "M5",
+      "timestamp": "2023-06-04T10:00:30.000Z"
+    },
+    "message": {
+      "order": {
+        "id": "O1",
+        "state": "Cancelled",
+        "provider": {
+          "id": "P1",
+          "locations": [
+            {
+              "id": "L1"
+            }
+          ]
+        },
+        "items": [
+          {
+            "id": "I1",
+            "fulfillment_id": "F1",
+            "quantity": {
+              "count": 0
+            }
+          }
+        ],
+        "quote": {
+          "price": {
+            "currency": "INR",
+            "value": "0"
+          },
+          "breakup": []
+        },
+        "cancellation": {
+          "cancelled_by": "buyerNP.com",
+          "reason": {
+            "id": "003"
+          }
+        },
+        "fulfillments": [
+          {
+            "id": "F1",
+            "state": {
+              "descriptor": {
+                "code": "Cancelled"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "cancellation_reason_codes": {
+    "001": "Price of one or more items have changed",
+    "002": "One or more items in the Order not available",
+    "003": "Order cancelled by buyer",
+    "004": "Order cancelled by seller due to bulk order",
+    "005": "Order cancelled by seller due to unavailability of delivery personnel",
+    "006": "Order cancelled by seller due to shop closure",
+    "009": "Order cancelled by seller due to delivery not possible",
+    "010": "Order cancelled by seller due to bad weather",
+    "011": "Order cancelled by seller as buyer not found",
+    "013": "Order cancelled by seller due to inappropriate information shared by buyer",
+    "014": "Order cancelled by seller as buyer not available at delivery location",
+    "016": "Order cancelled by seller as buyer refused to accept the delivery",
+    "017": "Order cancelled by seller as buyer refused to pay the amount",
+    "018": "Order cancelled by logistics provider as buyer not found",
+    "020": "Order cancelled by logistics provider as buyer refused to accept delivery"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "total_schemas": 21,
+  "domains": {
+    "FIS": {
+      "count": 14,
+      "actions": [
+        "init",
+        "select",
+        "on_confirm",
+        "status",
+        "confirm",
+        "on_init",
+        "on_cancel",
+        "on_status",
+        "on_search",
+        "on_select",
+        "update",
+        "on_update",
+        "search",
+        "cancel"
+      ],
+      "versions": []
+    },
+    "RETAIL": {
+      "count": 7,
+      "versions": [
+        "1.2.0",
+        "1.2.5"
+      ],
+      "actions": [
+        "cancel",
+        "on_cancel",
+        "rating",
+        "status",
+        "track"
+      ]
+    }
+  }
+}
