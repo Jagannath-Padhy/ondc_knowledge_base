@@ -1,0 +1,9 @@
+{
+  "scrape_timestamp": "2025-07-08T16:50:20.390877",
+  "domain": "retail",
+  "version": "1.2.0",
+  "sources": [
+    "https://docs.google.com/document/d/1brvcltG_DagZ3kGr1ZZQk4hG4tze3zvcxmGV4NMTzr8/edit"
+  ],
+  "total_documents": 13
+}

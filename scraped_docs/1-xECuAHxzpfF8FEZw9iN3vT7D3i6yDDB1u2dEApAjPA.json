@@ -1,0 +1,27 @@
+{
+  "doc_id": "1-xECuAHxzpfF8FEZw9iN3vT7D3i6yDDB1u2dEApAjPA",
+  "title": "Untitled Document",
+  "version": "unknown",
+  "source_url": "https://www.google.com/url?q=https://docs.google.com/document/d/1-xECuAHxzpfF8FEZw9iN3vT7D3i6yDDB1u2dEApAjPA/edit&sa=D&source=editors&ust=1751893809266885&usg=AOvVaw2xxtgEOL8Kmif5mm3UWy-l",
+  "main_content": "RevisionHistory\nVersionDateChanges0.114th Oct 2022Initial draft\nVersion\nDate\nChanges\n0.1\n14th Oct 2022\nInitial draft\nPre-requisites\nKey pairs, for signing & encryption, can be generated usinglibsodium.\nCreating Key Pairs\nCreate key pairs, forsigning(ed25519) & encryption (X25519);[a]\nUpdate base64encoded public keys in registry;\nUtility to generate signing key pairs and test signing & verification ishere;\nAuth Header Signing\nGenerate UTF-8 byte array from json payload;\nGenerate Blake2b hash from UTF-8 byte array;\nCreate base64 encoding of Blake2b hash. This becomes the digest for signing;\nSign the request, using your private signing key, and add the signature to the request authorization header, following steps documentedhere;\nAuth Header Verification\nExtract the digest from the encoded signature in the request;\nGet the signing_public_key from registry using lookup (by using the ukId in the authorization header);\nCreate (UTF-8) byte array from theraw payloadand generate Blake2b hash;\nCompare generated Blake2b hash with the decoded digest from the signature in the request;\nIn case of failure to verify, HTTP error 401 should be thrown;\n[a]How to create key pairs ??",
+  "footer_content": "",
+  "enums": {},
+  "definitions": {},
+  "hyperlinks": [
+    {
+      "text": "libsodium",
+      "url": "https://www.google.com/url?q=https://libsodium.gitbook.io/doc/bindings_for_other_languages&sa=D&source=editors&ust=1751893833275646&usg=AOvVaw1TN8BRk2HYRils2TpJUrQW",
+      "context": "libsodium"
+    },
+    {
+      "text": "here",
+      "url": "https://www.google.com/url?q=https://github.com/ONDC-Official/reference-implementations/tree/main/utilities/signing_and_verification&sa=D&source=editors&ust=1751893833276798&usg=AOvVaw0dXjxrASoD8HLPQXZGb2o3",
+      "context": "here"
+    },
+    {
+      "text": "here",
+      "url": "https://www.google.com/url?q=https://docs.google.com/document/d/1Iw_x-6mtfoMh0KJwL4sqQYM0kD17MLxiMCUOZDBerBo/edit%23&sa=D&source=editors&ust=1751893833277842&usg=AOvVaw3CgxRLFyFMXBqHvlClTlpY",
+      "context": "here"
+    }
+  ]
+}
