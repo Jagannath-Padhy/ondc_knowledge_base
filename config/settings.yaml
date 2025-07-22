@@ -1,0 +1,45 @@
+# ONDC Knowledge Base Configuration
+
+# API Configuration
+gemini:
+  api_key: "AIzaSyBh4Xiy6AGN9kDmU0tE-UZY4hN3WUqXmcU"
+  model: "gemini-2.5-pro"
+
+# Vector Database
+qdrant:
+  host: "localhost"
+  port: 6333
+  collection_name: "ondc_knowledge"
+
+# Document Sources
+sources:
+  google_docs:
+    - "https://docs.google.com/document/d/1brvcltG_DagZ3kGr1ZZQk4hG4tze3zvcxmGV4NMTzr8/edit"
+    - "https://docs.google.com/document/d/1E2OyVXh34YNEVOnS4rO3nPVoqTO3RsG2uh-BqnSrqgY/edit"
+    - "https://docs.google.com/document/d/1ROAGXqj5cJkgsNWvg_xiufglhqEQDJFBgQSPcFZMZd4/edit"
+    - "https://docs.google.com/document/d/1f0BhkGAoAi79lXGhI9qS-MhwdsSK390iJT1KjGMWoc4/edit"
+  
+  github_repos:
+    - "https://github.com/ONDC-Official/ONDC-RET-Specifications"
+  
+  web_docs:
+    - "https://ondc-official.github.io/ONDC-RET-Specifications/"
+
+# Processing Configuration
+processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+  max_recursion_depth: 3
+  batch_size: 10
+
+# RAG Configuration
+rag:
+  similarity_threshold: 0.7
+  max_results: 5
+  include_metadata: true
+
+# Streamlit Configuration
+ui:
+  page_title: "ONDC Knowledge Base"
+  page_icon: "🔍"
+  layout: "wide" 
