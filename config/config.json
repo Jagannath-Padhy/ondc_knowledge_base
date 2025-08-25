@@ -1,5 +1,5 @@
 {
-  "gemini_api_key": "AIzaSyBh4Xiy6AGN9kDmU0tE-UZY4hN3WUqXmcU",
+  "gemini_api_key": "insert-here",
   "qdrant": {
     "host": "localhost",
     "port": 6333,
